@@ -1,3 +1,3 @@
-import { Provider } from 'provider';
+import { Provider } from './provider';
 
 export const provider = new Provider();

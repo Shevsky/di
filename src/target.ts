@@ -1,4 +1,4 @@
-import { Provider } from 'provider';
+import { Provider } from './provider';
 
 /** @internal */
 export const TARGET_SYMBOL = Symbol('di-target');
