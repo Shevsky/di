@@ -1,0 +1,29 @@
+{
+  "name": "@shevsky/di",
+  "version": "1.0.0",
+  "main": "cjs/index.js",
+  "module": "es/index.js",
+  "types": "types/index.d.ts",
+  "scripts": {
+    "build_es": "tsc -p . -d true --declarationDir dist/types --outDir dist/es",
+    "build_cjs": "tsc -p . --outDir dist/cjs -m commonjs",
+    "build": "npm run build_cjs && npm run build_es",
+    "postbuild": "node ./scripts/create-build-package-json.js && node ./scripts/copy-readme.js",
+    "release": "npm publish dist"
+  },
+  "peerDependencies": {
+    "reflect-metadata": ">=0.1.13",
+    "typescript": ">=3.8.0"
+  },
+  "devDependencies": {
+    "@types/node": "10.12.9",
+    "awesome-typescript-loader": "5.2.1",
+    "reflect-metadata": "0.1.13",
+    "remove-webpack-plugin": "1.2.2",
+    "typescript": "4.1.2",
+    "webpack": "4.41.5",
+    "webpack-cli": "3.3.10",
+    "webpack-dev-server": "3.10.1",
+    "webpack-merge": "4.2.2"
+  }
+}
